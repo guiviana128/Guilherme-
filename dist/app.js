@@ -57,7 +57,7 @@ function overview() {
   const wanted = records.compras.filter(item => !item.done);
   const total = wanted.reduce((sum,item) => sum+Number(item.price || 0),0);
   const metrics = {agenda:[pending,'Lembretes pendentes'],notas:[average,'Média das notas registradas'],som:[top?.plays ?? 0,top?.title ?? 'Nenhuma faixa registrada'],compras:[wanted.length,money.format(total) + ' em itens pendentes']};
-  return '<div class="hero"><h1>SALVE, <span>VIAANA.</span></h1><p>O painel pessoal de Guilherme Viana.</p><button class="primary" data-new="agenda">+ Novo lembrete</button></div><div class="grid">' +
+  return '<div class="hero"><h1>VIAANA<span>.</span></h1><p>Painel pessoal de Guilherme Viana</p><button class="primary" data-new="agenda">+ Novo lembrete</button></div><div class="grid">' +
     Object.entries(metrics).map(([key,[count,detail]]) => '<a class="tile panel" href="#'+key+'">'+icon(key)+'<h2>'+labels[key]+'</h2><strong class="count">'+count+'</strong><p>'+escapeHtml(detail)+'</p></a>').join('')+'</div>';
 }
 function localDay(date) {
