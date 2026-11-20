@@ -52,3 +52,8 @@ button.primary,.hero .primary{background:#181515;border-color:#181515;color:#fff
   .poster::before{content:'';display:block;position:absolute;inset:0 4px auto;height:18px;background:repeating-linear-gradient(-42deg,#191515 0 4px,transparent 4px 13px,#a80f22 13px 16px,transparent 16px 25px);opacity:.8}
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+/* Personagens recortados da referência enviada. */
+body{background:#fff}
+@media(min-width:850px){.margin-art{height:clamp(620px,86vh,907px)}main{width:69%}}
+@media(max-width:849px){.poster{padding-top:52px}.poster::before{display:none}.margin-art{display:block;height:100px;object-fit:cover;object-position:top}}
