@@ -1,5 +1,5 @@
-const cacheName = 'viaana-v5';
-const assets = ['./', './index.html', './style.css?v=5', './app.js?v=5', './manifest.webmanifest', './art-perfil.jpg', './art-capuz.jpg', './art-traco.jpg', './art-autorretrato.jpg', './art-estrelas.jpg', './art-pixel.jpg', './icon.svg', './icon-192.png', './icon-512.png'];
+const cacheName = 'viaana-v6';
+const assets = ['./', './index.html', './style.css?v=6', './app.js?v=6', './manifest.webmanifest', './art-perfil.jpg', './art-capuz.jpg', './art-traco.jpg', './art-autorretrato.jpg', './art-estrelas.jpg', './art-pixel.jpg', './icon.svg', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', event => event.waitUntil(caches.open(cacheName).then(cache => cache.addAll(assets)).then(() => self.skipWaiting())));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key.startsWith('viaana-') && key !== cacheName).map(key => caches.delete(key)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', event => {
